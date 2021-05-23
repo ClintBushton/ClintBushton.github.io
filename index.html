@@ -1,110 +1,164 @@
-<!doctype html>
-<html>
-<head>
+<!DOCTYPE html>
+
 <style>
-.button {
-  background-color: #555555;
-  border-radius: 12px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+body {
+  background: "white";
+  margin: 10;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 26px;
+input {
+  text-align: center
+}
+
+#secret{
+	color: #170F0D;
+}
+
+input[type="text"], input[type="submit"], textarea, td, a {
+  font-family: Courier New; 
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+
+}
+
+
+
+input[type="autocomplete"]{
+	background-color: black;
+}
+
+input[type="content"]{
+	background-color: black;
+}
+
+#searchBar{
+	border: 6px solid #7A7669;
+	width: 700px;
+	padding-bottom: 110px;
+	padding-top: 60px;
+
+}
+
+td{
+	padding: 10px;
 }
 
 table{
- border: 4px solid black;
+		border-collapse: collapse;
+		border: 4px solid #7A7669;
 }
 
+.dropbtn {
+    background-color: "white";
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+	font-family: Courier New;
+    border: none;
+    cursor: pointer;
+}
 
+.dropbtn:hover, .dropbtn:focus {
+    background-color: "white";
+}
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 10px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: white;}
+
+.show {display: block;}
 </style>
-</head>
-<body>
-<p>Apple TV</p>
-<table>
-<tr>
-	<td>
-	</td>
-	<td>
-		<button class ="button" onclick="transmit('0000 006d 0001 0011 0140 009e 0014 003c 0014 003c 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 003c 0014 003c 0014 003c 0014 003c 0014 003c 0014 0014 0014 0379')">
-   ^
-</button>
-	</td>
-	<td>
-	</td>
-</tr>	
-<tr>
-	<td style = "text-align: right">
-	<button class ="button" onclick="transmit('0000 006d 0001 0011 0140 009e 0014 003c 0014 003c 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 003c 0014 003c 0014 0014 0014 003c 0014 003c 0014 0014 0014 003c 0014 0014 0014 0379')">
-   <
-   </button>
-	</td>
-	<td>
-	<button class ="button" onclick="transmit('0000 006d 0001 0011 0140 009e 0014 003c 0014 003c 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 003c 0014 0014 0014 0014 0014 0379')">
-   o
-</button>
-	</td>
 
-	<td>
-	<button class ="button" onclick="transmit('0000 006d 0001 0011 0140 009e 0014 003c 0014 003c 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 003c 0014 0014 0014 003c 0014 003c 0014 0014 0014 003c 0014 0014 0014 0379')">
-   >
-</button>
-	</td>
-</tr>	
-<tr>
-	<td>
-	</td>
-	<td>
-	<button class ="button" onclick="transmit('0000 006d 0001 0011 0140 009e 0014 003c 0014 003c 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 003c 0014 003c 0014 0014 0014 003c 0014 003c 0014 003c 0014 003c 0014 0014 0014 0379')">
-   v
-</button>
-	</td>
-	<td>
-	</td>
-</tr>	
-<tr>
-	<td>
-	<button class ="button" onclick="transmit('0000 006c 0001 0011 0143 00a0 0014 003d 0014 003d 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 003d 0014 0014 0014 003d 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0382')">
-   MENU
-</button>
-	</td>
+
+<html>
+
+<head>
+  <title>Austin</title>
+  <link rel="shortcut icon" href="https://i.imgur.com/pKNr8KD.png">
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+	<table>
+	<tr>
 	<td>
 	</td>
 	<td>
-	<button class ="button" onclick="transmit('0000 006d 0001 0011 0140 009e 0014 003c 0014 003c 0014 0014 0014 0014 0014 0014 0014 0014 0014 003c 0014 0014 0014 003c 0014 003c 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0014 0379')">
-   > ||
-</button>
+	<a href="https://mail.google.com/mail/u/0/#inbox">gmail</a>
 	</td>
-</tr>	
-</table>
-<p>Sony VCR</p>
-<table>
-<tr>
-<td>
-<button class ="button" onclick="transmit('0000 0067 0000 0015 0060 0018 0018 0018 002F 0018 002F 0018 002F 0018 0018 0018 002F 0018 0018 0018 0018 0018 002F 0018 0018 0018 002F 0018 002F 0018 002F 0018 002F 0018 0018 0018 0018 0018 002F 0018 0018 0018 002F 0018 0018 01EF')">
-   Power On
-</button>
-</td>
-<td>
-<button class ="button" onclick="transmit('0000 0067 0000 0015 0060 0018 002F 0018 002F 0018 002F 0018 002F 0018 0018 0018 002F 0018 0018 0018 0018 0018 002F 0018 0018 0018 002F 0018 002F 0018 002F 0018 002F 0018 0018 0018 0018 0018 002F 0018 0018 0018 002F 0018 0018 01EF')">
-   Power Off
-</button>
-</td>
-</tr>
-</table>
-<p>Vizio TV</p>
+	<td>
+
+	</td>
+	<td>
+	<div class="dropdown">
+		<button onclick="myFunction3()" class="dropbtn">rinks</button>
+			<div id="myDropdown3" class="dropdown-content">
+				<a href="http://google.com">/fa/</a>
+			</div>
+	</div>
+	</td>
+	<td>
+	<a href="https://www.youtube.com/">youtube</a>
+	</td>
+	</tr>
+	</table>
+	</div>
+	 <div id="instafeed"></div>
+
+		<script type="text/javascript">
+    		var feed = new Instafeed({
+      		accessToken: 'your-token'
+    		});
+    		feed.run();
+		</script>
+	<br><br><br><br><br><br><br>
+		
+
 </body>
-</html>
-</body>
+
+<script>
+function myFunction3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" src="path/to/instafeed.min.js"></script>
+
 </html>
